@@ -63,7 +63,7 @@ const MintNFT = () => {
     const value = web3.utils.toWei('0.02', 'ether'); 
 
     try {
-      const tx = await contract.methods.mint(numTokens)
+      await contract.methods.mint(numTokens)
         .send({ from: account, value });
       alert("Minting Successful!");
     } catch (error) {
